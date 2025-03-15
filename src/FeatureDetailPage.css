@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --feature-color: #E39D90;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.feature-detail-page {
+  font-family: 'Poppins', sans-serif;
+  min-height: 200vh; /* To enable scrolling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Add a color overlay to ensure text remains readable over any background */
+.feature-detail-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    170deg, 
+    var(--feature-color) 0%,
+    var(--feature-color) 60%,
+    #d07d70 100%
+  );
+  opacity: 0.85; /* Adjust opacity to control how much of the background image shows through */
+  z-index: -1;
+}
+
+
+/* Navigation Bar */
+.feature-nav {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  background-color: transparent;
+  position: fixed;
+  margin-bottom: 1rem;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-link {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Hero Section */
+.feature-hero {
+  padding-top: 10rem; /* Add this line */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding: 2rem 2.5rem;
+  min-height: 30vh;
+}
+
+.feature-logo-container {
+  max-width: 250px;
+}
+
+.feature-detail-logo {
+  width: 100%;
+  height: auto;
+}
+
+.feature-hero-content {
+  text-align: right;
+  max-width: 40%;
+}
+
+.feature-tagline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+  color: #fff;
+}
+
+.feature-hero-description {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Feature Title Section */
+.feature-title-container {
+  /* text-align: center; */
+  padding: 4rem 2rem;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.feature-title {
+    font-size: 5rem;
+    font-weight: 600;
+    color: #E3DBCE;
+    word-wrap: 'break-word';
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+}
+ 
+.feature-description {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #E3DBCE;
+  margin-bottom: 0.rem;
+  max-width: 800px;
+}
+
+.feature-steps {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+  color: black;
+}
+
+/* Scroll Down Button */
+.scroll-down-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-down-container.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-down-btn {
+  background-color: #f1f1f1;
+  color: var(--feature-color);
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-down-btn:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Detailed Section */
+.feature-details {
+    background-color: transparent; ;
+    padding: 3rem 5rem;
+    min-height: 200vh;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+    /* Added positioning to ensure it's visible when we want it to be */
+    position: relative;
+    z-index: 1;
+  }
+  .feature-detail-page {
+    font-family: 'Poppins', sans-serif;
+    min-height: 200vh; /* To enable scrolling */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .feature-nav {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+    background-color: transparent;
+    margin-bottom: 0.2rem;
+      position: fixed;
+      margin-bottom: 1.5rem;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+    
+    .nav-link {
+      color: #f1f1f1;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 300;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: #fff;
+      opacity: 0.9;
+    }
+  
+  .feature-details.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .feature-header {
+    display: flex;
+    align-items: center;
+    margin-top: 0.1rem;
+    /* margin-bottom: 1rem; */
+  }
+  
+  .feature-logo-small {
+    width: 180px;
+    height: 180px;
+    margin-right: 2rem;
+  }
+  
+  .feature-logo-small img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .feature-header-text h2 {
+    font-size: 6rem;
+    font-weight: 600;
+    color: #E3DBCE;
+    word-wrap: 'break-word';
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+  }
+  
+  .feature-header-text p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-steps-small {
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: black;
+  }
+  
+  /* Feature Info Grid */
+  .feature-info-grid {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .feature-info-box {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem;
+    border-radius: 5px;
+  }
+  
+  .feature-info-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #5C5858;
+  }
+  
+  .feature-info-box ul {
+    list-style-type: #5C5858;
+    color: #5C5858;
+  }
+  
+  .feature-info-box li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .feature-info-box li:before {
+    content: "•";
+    margin-right: 5px;
+     color: #5C5858;
+  }
+  
+  /* Users Section */
+  .feature-users-section {
+    margin-top: 0.5rem;
+  }
+  
+  .users-heading {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color:#E3DBCE;
+  }
+  
+  .feature-users-grid {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .user-box {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  .user-box h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #5C5858;
+  }
+  
+  .for-text {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #5C5858;
+  }
+  
+  .user-box p {
+    font-size: 1rem;
+    color: #5C5858;
+  }
