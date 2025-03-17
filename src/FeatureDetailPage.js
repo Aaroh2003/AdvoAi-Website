@@ -271,7 +271,7 @@ function FeatureDetailPage() {
       {/* Scroll Down Button - Hidden when scrolled down */}
       <div className={`scroll-down-container ${scrolled ? 'hidden' : ''}`}>
         <button className="scroll-down-btn" onClick={scrollToDetails}>
-          Scroll Down
+          Explore
         </button>
       </div>
 

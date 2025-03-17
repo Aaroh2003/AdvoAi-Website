@@ -1,50 +1,5 @@
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .feature-number {
-    font-size: 3rem;
-  }
-  
-  .feature-name {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .features-grid {
-    flex-direction: column;
-    height: auto;
-  }
-  
-  .feature-card {
-    min-height: auto;
-    padding: 3rem 2rem;
-  }
-  
-  .feature-logo {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-@media (max-width: 576px) {
-  .feature-number {
-    font-size: 2.5rem;
-  }
-  
-  .feature-name {
-    font-size: 1.3rem;
-  }
-  
-  .feature-description {
-    font-size: 1rem;
-  }
-  
-  .feature-logo {
-    width: 100px;
-    height: 100px;
-  }
-}/* FeaturesPage.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 
 .features-container {
   min-height: 100vh;
@@ -65,7 +20,7 @@
 
 .feature-card {
   flex: 1;
-  padding: 4rem 2rem;
+  padding: clamp(1rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -76,32 +31,33 @@
 }
 
 .feature-logo {
-  width: 180px;
-  height: 180px;
-  margin-bottom: 2rem;
+  width: clamp(100px, 15vw, 180px);
+  height: clamp(100px, 15vw, 180px);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
 }
 
 .feature-logo img {
-  width: 150px;
-  height: 150px;
+  width: clamp(80px, 12vw, 150px);
+  height: clamp(80px, 12vw, 150px);
+  object-fit: contain;
 }
 
 .feature-number {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(0.8rem, 2vw, 1.5rem);
   transition: color 0.3s ease;
 }
 
 .feature-name {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(0.8rem, 2vw, 1.5rem);
   transition: color 0.3s ease;
 }
 
 .feature-description {
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   font-weight: 400;
   margin-bottom: auto;
   line-height: 1.6;
@@ -112,13 +68,13 @@
 .learn-more-btn {
   background-color: transparent;
   border: 1px solid #ccc;
-  padding: 0.5rem 1.5rem;
+  padding: clamp(0.3rem, 1vw, 0.5rem) clamp(1rem, 2vw, 1.5rem);
   border-radius: 25px;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: flex-start;
-  margin-top: 2rem;
+  margin-top: clamp(1rem, 3vw, 2rem);
 }
 
 .learn-more-btn:hover {
@@ -128,8 +84,8 @@
 /* Navigation */
 .back-to-home {
   position: absolute;
-  bottom: 2rem;
-  left: 2rem;
+  bottom: clamp(1rem, 3vw, 2rem);
+  left: clamp(1rem, 3vw, 2rem);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -139,7 +95,133 @@
 }
 
 .small-logo {
-  width: 40px;
+  width: clamp(30px, 5vw, 40px);
   height: auto;
   margin-right: 10px;
+}
+
+/* Additional responsive styles for the main containers */
+@media (max-width: 1024px) {
+  .features-grid {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .feature-card {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .feature-logo {
+    margin-bottom: 1rem;
+  }
+  
+  .learn-more-btn {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Additional responsive styles for the other CSS files */
+
+/* App.css responsive improvements */
+@media (max-height: 800px) {
+  .app-container {
+    padding: clamp(0.5rem, 2vw, 2rem);
+    justify-content: flex-start;
+  }
+  
+  .logo-row {
+    margin-bottom: clamp(1rem, 4vw, 3rem);
+  }
+  
+  .main-title {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+  
+  .coming-soon {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  .description-box {
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+  }
+  
+  .button-container {
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  }
+}
+
+/* Feature detail page responsive improvements */
+.feature-hero {
+  padding-top: clamp(6rem, 10vh, 10rem);
+  padding: clamp(1rem, 3vw, 2rem);
+  min-height: clamp(20vh, 25vh, 30vh);
+}
+
+.feature-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+}
+
+.feature-description {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.feature-steps {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.feature-details {
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1.5rem, 6vw, 5rem);
+}
+
+.feature-logo-small {
+  width: clamp(100px, 15vw, 180px);
+  height: clamp(100px, 15vw, 180px);
+}
+
+/* Ensure responsive typography throughout */
+.feature-header-text h2 {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+}
+
+.feature-header-text p {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+}
+
+.feature-info-box h3 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.users-heading {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.user-box h4 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+/* Additional viewport height considerations */
+@media (max-height: 700px) {
+  .feature-card {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .feature-logo {
+    margin-bottom: 0.8rem;
+  }
+  
+  .feature-number, .feature-name {
+    margin-bottom: 0.8rem;
+  }
 }
