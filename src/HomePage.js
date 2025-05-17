@@ -9,6 +9,7 @@ import advofinderLogo from './assets/advofinder.png';
 import advoplannerLogo from './assets/advoplanner.png';
 import advointernLogo from './assets/advointern.png';
 import indiaFlag from './assets/india_flag.png';
+import './HomePage.css';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ function HomePage() {
 
         <div className="title-section">
           <h1 className="main-title">
-            AdvoAi<span className="coming-soon">COMING SOON!</span>
+            AdvoAI<span className="coming-soon">COMING SOON!</span>
           </h1>
         </div>
 

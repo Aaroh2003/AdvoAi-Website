@@ -11,9 +11,13 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .feature-detail-page {
   font-family: 'Poppins', sans-serif;
-  min-height: 200vh; /* To enable scrolling */
+  min-height: 200vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,9 +25,9 @@
   color: #fff;
   overflow-x: hidden;
   position: relative;
+  padding: 1rem;
 }
 
-/* Add a color overlay to ensure text remains readable over any background */
 .feature-detail-page::before {
   content: '';
   position: absolute;
@@ -31,25 +35,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    170deg, 
-    var(--feature-color) 0%,
-    var(--feature-color) 60%,
-    #d07d70 100%
-  );
-  opacity: 0.85; /* Adjust opacity to control how much of the background image shows through */
+  background: linear-gradient(170deg, var(--feature-color) 0%, var(--feature-color) 60%, #d07d70 100%);
+  opacity: 0.85;
   z-index: -1;
 }
 
-
-/* Navigation Bar */
 .feature-nav {
   display: flex;
   justify-content: center;
   padding: 1.5rem 2rem;
   background-color: transparent;
   position: fixed;
-  margin-bottom: 1rem;
   top: 0;
   width: 100%;
   z-index: 100;
@@ -61,6 +57,7 @@
   font-size: 1.1rem;
   font-weight: 300;
   transition: all 0.3s ease;
+  margin: 0 1.5rem;
 }
 
 .nav-link:hover {
@@ -68,19 +65,19 @@
   opacity: 0.9;
 }
 
-/* Hero Section */
 .feature-hero {
-  padding-top: 10rem; /* Add this line */
+  padding-top: 10rem;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 3rem;
-  padding: 2rem 2.5rem;
+  padding: 2rem;
   min-height: 30vh;
+  gap: 2rem;
 }
 
 .feature-logo-container {
   max-width: 250px;
+  flex: 1;
 }
 
 .feature-detail-logo {
@@ -90,62 +87,63 @@
 
 .feature-hero-content {
   text-align: right;
-  max-width: 40%;
+  max-width: 50%;
+  flex: 1;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .feature-tagline {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 600;
   margin-bottom: 0.1rem;
-  color: #fff;
 }
 
 .feature-hero-description {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   font-weight: 300;
 }
 
-/* Feature Title Section */
 .feature-title-container {
-  /* text-align: center; */
   padding: 4rem 2rem;
   min-height: 30vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
+  max-width: 100%;
 }
 
 .feature-title {
-    font-size: 5rem;
-    font-weight: 600;
-    color: #E3DBCE;
-    word-wrap: 'break-word';
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
-}
- 
-.feature-description {
-  font-size: 1.5rem;
+  font-size: clamp(2.5rem, 7vw, 5rem);
   font-weight: 600;
   color: #E3DBCE;
-  margin-bottom: 0.rem;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+  overflow-wrap: break-word;
+}
+
+.feature-description {
+  font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+  font-weight: 600;
+  color: #E3DBCE;
   max-width: 800px;
+  margin-bottom: 1rem;
+  overflow-wrap: break-word;
 }
 
 .feature-steps {
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-  font-weight: 300;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
   color: black;
+  word-break: break-word;
 }
 
-/* Scroll Down Button */
+/* Scroll Button */
 .scroll-down-container {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   z-index: 10;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .scroll-down-container.hidden {
@@ -170,174 +168,144 @@
   transform: translateY(-2px);
 }
 
-/* Detailed Section */
+/* Details Section */
 .feature-details {
-    background-color: transparent; ;
-    padding: 3rem 5rem;
-    min-height: 200vh;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.5s ease;
-    /* Added positioning to ensure it's visible when we want it to be */
-    position: relative;
-    z-index: 1;
-  }
-  .feature-detail-page {
-    font-family: 'Poppins', sans-serif;
-    min-height: 200vh; /* To enable scrolling */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #fff;
-    overflow-x: hidden;
-    position: relative;
-  }
-  .feature-nav {
-    display: flex;
-    justify-content: center;
-    padding: 1.5rem 2rem;
-    background-color: transparent;
-    margin-bottom: 0.2rem;
-      position: fixed;
-      margin-bottom: 1.5rem;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-    }
-    
-    .nav-link {
-      color: #f1f1f1;
-      text-decoration: none;
-      margin: 0 1.5rem;
-      font-size: 1.1rem;
-      font-weight: 300;
-      transition: all 0.3s ease;
-    }
-    
-    .nav-link:hover {
-      color: #fff;
-      opacity: 0.9;
-    }
-  
-  .feature-details.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .feature-header {
-    display: flex;
-    align-items: center;
-    margin-top: 0.1rem;
-    /* margin-bottom: 1rem; */
-  }
-  
-  .feature-logo-small {
-    width: 180px;
-    height: 180px;
-    margin-right: 2rem;
-  }
-  
-  .feature-logo-small img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .feature-header-text h2 {
-    font-size: 6rem;
+  padding: 3rem 2rem;
+  min-height: 200vh;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.feature-details.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feature-logo-small {
+  width: 180px;
+  height: 180px;
+}
+
+.feature-header-text h2 {
+  font-size: clamp(2rem, 6vw, 6rem);
+  font-weight: 600;
+  color: #E3DBCE;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+}
+
+.feature-header-text p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.feature-steps-small {
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: black;
+}
+
+/* Info Grid */
+.feature-info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.feature-info-box {
+  flex: 1 1 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.feature-info-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #E3DBCE;
-    word-wrap: 'break-word';
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.25);
-  }
-  
-  .feature-header-text p {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .feature-steps-small {
-    letter-spacing: 1px;
-    font-weight: 300;
     color: black;
-  }
-  
-  /* Feature Info Grid */
-  .feature-info-grid {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 0.2rem;
-  }
-  
-  .feature-info-box {
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.3rem;
-    border-radius: 5px;
-  }
-  
-  .feature-info-box h3 {
+}
+.feature-info-box ul,
+.feature-info-box li {
+  color: black;
+}
+
+.feature-info-box li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.feature-info-box li::before {
+  content: "•";
+  margin-right: 5px;
+  color: black;
+}
+
+/* Users Section */
+.feature-users-section {
+  margin-top: 2rem;
+}
+
+.users-heading {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #E3DBCE;
+  margin-bottom: 0.5rem;
+}
+
+.feature-users-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.user-box {
+  flex: 1 1 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.user-box h4 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     font-weight: 500;
     color: black;
   }
-  
-  .feature-info-box ul {
-    list-style-type: black;
-    color: black;
+.user-box p,
+.for-text {
+  color: black;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* Make sure all sections are responsive */
+@media (max-width: 768px) {
+  .feature-hero,
+  .feature-header {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .feature-info-box li {
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
+
+  .feature-hero-content {
+    text-align: center;
+    max-width: 100%;
   }
-  
-  .feature-info-box li:before {
-    content: "•";
-    margin-right: 5px;
-     color: black;
+
+  .feature-title {
+    text-align: center;
   }
-  
-  /* Users Section */
-  .feature-users-section {
-    margin-top: 0.5rem;
-  }
-  
-  .users-heading {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      color:#E3DBCE;
-  }
-  
-  .feature-users-grid {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .user-box {
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 10px;
-  }
-  
-  .user-box h4 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-    color: black;
-  }
-  
-  .for-text {
-    font-size: 1rem;
-    font-weight: 300;
-    color: black;
-  }
-  
-  .user-box p {
-    font-size: 1rem;
-    color: black;
-  }
+}

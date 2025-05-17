@@ -150,15 +150,15 @@ function FeatureDetailPage() {
       users: {
         students: {
           label: 'Students',
-          for: 'research, documenting and learning purposes'
+          for: 'research and learning purposes'
         },
         lawyers: {
           label: 'Law firms',
-          for: 'research, documenting and learning purposes'
+          for: 'research and learning purposes'
         },
         others: {
           label: 'Others',
-          for: 'Understand legal terms and processes, with instant answers to your queries.'
+          for: 'Understanding legal terms and processes.'
         }
       }
     },
