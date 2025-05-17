@@ -18,7 +18,7 @@ function FeaturesPage() {
       id: 'advofinder',
       number: '01',
       name: 'AdvoFinder',
-      description: 'Find Lawyers near you in minutes.',
+      description: 'Find verified law firms around you instantly.',
       color: '#E39D90',
       logo: advofinderLogo
     },
@@ -26,7 +26,7 @@ function FeaturesPage() {
       id: 'advoconnect',
       number: '02',
       name: 'AdvoConnect',
-      description: 'Connect with Lawyers through our community.',
+      description: 'Engage with legal peers through our verified community.',
       color: '#529DA3',
       logo: advoconnectLogo
     },
@@ -34,7 +34,7 @@ function FeaturesPage() {
       id: 'advoplanner',
       number: '03',
       name: 'AdvoPlanner',
-      description: 'Plan your cases, hearings and meetings.',
+      description: 'Plan your legal tasks with smart scheduling tools.',
       color: '#B59A63',
       logo: advoplannerLogo
     },
@@ -42,7 +42,7 @@ function FeaturesPage() {
       id: 'aially',
       number: '04',
       name: 'AiAlly',
-      description: 'AI chatbot for all your first aid.',
+      description: 'AI chatbot for legal queries, documents, and aid.',
       color: '#A6DEF6',
       logo: aiallyLogo
     },
@@ -50,7 +50,7 @@ function FeaturesPage() {
       id: 'advointern',
       number: '05',
       name: 'AdvoIntern',
-      description: 'Find certified Internships under industry leading advocates.',
+      description: 'Find certified internships under verified advocates.',
       color: '#247172',
       logo: advointernLogo
     }

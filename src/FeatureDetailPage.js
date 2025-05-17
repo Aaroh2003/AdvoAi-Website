@@ -27,33 +27,31 @@ function FeatureDetailPage() {
       logo: advofinderLogo,
       color: '#E39D90',
       background: advofinderBg,
-      description: 'Finding and consulting Lawyers near you was never this easy !',
-      steps: 'Login>Enter Location>Select Lawyer>Call them',
-      tagline: 'Need a Lawyer?',
+      description: 'Finding and discovering law firms near you was never this easy !',
+      steps: 'Login>Enter Location>Select Law Firm>Call them',
+      tagline: 'Need a Law Firm?',
       keyFeatures: [
-        'Advanced filters',
-        'Map integration',
-        'Lawyer profiles',
-        'Booking system'
+        'Filter by city, case type, language, and locality',
+        'Real-time “Available Now" status for firms',
+        'Request-based contact forms',
+        'Verified firm profiles only - no individual advocate listings'
       ],
       keyComponents: [
-        'Rating system',
-        'Availability calendar',
-        'Consultation booking',
-        'Secure messaging'
+        'Search filters for practice area, city, and specialization',
+        'Status tracker for firm availability',
       ],
       users: {
         students: {
           label: 'Students',
-          for: 'finding lawyers'
+          for: 'finding law firms'
         },
         lawyers: {
-          label: 'Lawyers',
+          label: 'Law Firms',
           for: 'meeting new clients'
         },
         others: {
           label: 'Others',
-          for: 'finding lawyers'
+          for: 'finding law firms'
         }
       }
     },
@@ -63,33 +61,33 @@ function FeatureDetailPage() {
       logo: advoconnectLogo,
       color: '#529DA3',
       background: advoconnectBg,
-      description: 'Connect with leading Lawyers in our community model.',
+      description: 'Build your legal presence and connect with verified legal professionals.',
       steps: 'Login>Make a Profile>Connect!',
       tagline: 'Need a Platform to Express?',
       keyFeatures: [
-        'Clean feed layout',
-        'Easy post creation',
-        'Rich media support',
-        'Threaded discussions'
+        'Verified user profiles',
+        'Mentorship space',
+        'Public legal discussions',
+        'Role-based tagging'
       ],
       keyComponents: [
         'Topic categorization',
-        'User reputation system',
+        'Profile verification',
         'Content moderation tools',
-        'Search functionality'
+        'Read-only public access'
       ],
       users: {
         students: {
           label: 'Students',
-          for: 'posting, commenting, connecting with top lawyers'
+          for: 'for networking and knowledge sharing'
         },
         lawyers: {
-          label: 'Lawyers',
-          for: 'taking views and connecting with talent and their colleagues'
+          label: 'Law firms',
+          for: 'for professional discussions and visibility'
         },
         others: {
           label: 'Others',
-          for: 'posting, commenting, connecting with top lawyers and students'
+          for: 'for legal learning and interaction'
         }
       }
     },
@@ -100,19 +98,18 @@ function FeatureDetailPage() {
       color: '#B59A63',
       background: advoplannerBg,
       description: 'Manage cases, clients, and deadlines all at one place.',
-      steps: 'Login>Make a Profile>Connect!',
+      steps: 'Login >Make a Profile >Connect!',
       tagline: 'Need a Case Manager?',
       keyFeatures: [
-        'Month/week/day views',
-        'Task integration',
-        'Document attachment',
-        'Reminder system'
+        'Monthly, weekly, and daily task views',
+        'Smart legal to-do integration',
+        'Document uploads for personal tracking',
+        'Custom reminder and alert system'
       ],
       keyComponents: [
-        'Court date tracking',
-        'Deadline management',
-        'Resource linking',
-        'Collaboration tools'
+        'Moot & internship calendar sync',
+        'Exam & court date tracker',
+        'Private reading/resource logs',
       ],
       users: {
         students: {
@@ -120,7 +117,7 @@ function FeatureDetailPage() {
           for: 'documenting their cases and files'
         },
         lawyers: {
-          label: 'Lawyers',
+          label: 'Law firms',
           for: 'documenting their cases and files'
         },
         others: {
@@ -136,19 +133,19 @@ function FeatureDetailPage() {
       color: '#5DBDC6',
       background: aiallyBg,
       description:'Discuss whatever you can dream of. Go beyond!',
-      steps: 'Login>Make a Profile>Discover!',
+      steps: 'Login >Make a Profile >Discover!',
       tagline: 'Need a Personal Assistant?',
       keyFeatures: [
-        'Conversational UI',
-        'Quick response templates',
-        'Context preservation',
-        'Legal citation display'
+        'Conversational interface for legal queries',
+        'Quick Al-generated drafting templates',
+        'Context memory for follow-up questions',
+        'Legal citation previews for awareness'
       ],
       keyComponents: [
-        'Voice input support',
-        'Document upload',
-        'Legal term definitions',
-        'Escalation to human experts'
+        'Voice and text input options',
+        'Document formatting & structure assistance',
+        'Definitions of legal terms and procedures',
+        'Escalation path to verified legal educators'
       ],
       users: {
         students: {
@@ -156,12 +153,12 @@ function FeatureDetailPage() {
           for: 'research, documenting and learning purposes'
         },
         lawyers: {
-          label: 'Lawyers',
+          label: 'Law firms',
           for: 'research, documenting and learning purposes'
         },
         others: {
           label: 'Others',
-          for: 'first legal aid and finding the most suitable lawyer'
+          for: 'Understand legal terms and processes, with instant answers to your queries.'
         }
       }
     },
@@ -171,20 +168,20 @@ function FeatureDetailPage() {
       logo: advointernLogo,
       color: '#247172',
       background: advointernBg,
-      description: 'Get certified Internship Opportunities from leading Lawyers.',
-      steps: 'Login>Make your gig>Get noticed on AdvoIntern >Grab your Internship!',
+      description: 'Get certified Internship Opportunities from leading Law Firms.',
+      steps: 'Login >Make your gig >Get noticed on AdvoIntern >Grab your Internship!',
       tagline: 'Need an Internship?',
-      keyFeatures: [
-        'Clean listing layout',
-        'Quick apply function',
-        'Application tracking',
-        'Profile matching'
+     keyFeatures: [
+        'Structured internship listings',
+        'Quick-apply application flow',
+        'Transparent tracking dachboard',
+        'Skill-tagged profile match'
       ],
       keyComponents: [
-        'Resume builder',
-        'Skill assessment',
-        'Interview scheduling',
-        'Progress tracking'
+        'Resume builder tools',
+        'Legal skill assessments',
+        'Interview scheduling system',
+        'Internship milestone tracker'
       ],
       users: {
         students: {
@@ -192,7 +189,7 @@ function FeatureDetailPage() {
           for: 'finding internships'
         },
         lawyers: {
-          label: 'Lawyers',
+          label: 'Law firms',
           for: 'finding interns'
         },
         others: {

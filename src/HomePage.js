@@ -40,8 +40,7 @@ function HomePage() {
 
         <div className="description-box">
           <p className="description-text">
-            Our legal platform app aims to revolutionize the legal industry by
-            connecting lawyers, students, and clients through five core features:
+            Our AI-driven legal platform empowers law firms, students, and clients by offering seamless access to legal tools through five core features:
             <span className="feature advoconnect">AdvoConnect</span>,{" "}
             <span className="feature advofinder">AdvoFinder</span>,{" "}
             <span className="feature advoplanner">AdvoPlanner</span>,{" "}
@@ -65,7 +64,7 @@ function HomePage() {
           <div className="secure">
             <span className="secure-icon">✅</span> 100% Safe and Secure
           </div>
-          <div className="company-name">Gericht Avocat Consultancy Pvt. Ltd.</div>
+          <div className="company-name">AdvoAI Technologies Pvt. Ltd.</div>
         </div>
         
         

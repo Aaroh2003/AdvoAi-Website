@@ -279,13 +279,13 @@
   .feature-info-box h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #5C5858;
+    font-weight: 500;
+    color: black;
   }
   
   .feature-info-box ul {
-    list-style-type: #5C5858;
-    color: #5C5858;
+    list-style-type: black;
+    color: black;
   }
   
   .feature-info-box li {
@@ -297,7 +297,7 @@
   .feature-info-box li:before {
     content: "•";
     margin-right: 5px;
-     color: #5C5858;
+     color: black;
   }
   
   /* Users Section */
@@ -328,16 +328,16 @@
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 500;
-    color: #5C5858;
+    color: black;
   }
   
   .for-text {
     font-size: 1rem;
     font-weight: 300;
-    color: #5C5858;
+    color: black;
   }
   
   .user-box p {
     font-size: 1rem;
-    color: #5C5858;
+    color: black;
   }

@@ -1,298 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&display=swap');
-
-:root {
-  --advoai-teal: #529DA3;
-  --advoai-coral: #E39D90;
-  --advoai-yellow: #B59A63;
-  --advoai-blue: #247172;
-  --advoai-primary: #5DBDC6;
-  --text-color: #333;
-  --light-bg: #f3f3f3;
+.App {
+  text-align: center;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #EA9284, #B59A63, #50A7A9);
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.app-container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  overflow: hidden;
-}
-
-.content-wrapper {
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  max-width: 1200px;
-  width: 100%;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.logo-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
-  width: 100%;
-  gap: 20px;
+.App-link {
+  color: #61dafb;
 }
 
-.main-logo {
-  width: 180px;
-  height: auto;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
-}
-
-.feature-logos {
-  display: flex;
-  gap: 10px;
-}
-
-.feature-logo {
-  width: 60px;
-  height: auto;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-.title-section {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.main-title {
-  font-size: 4rem;
-  font-weight: 700;
-  color: #E3DBCE;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  letter-spacing: 2px;
-}
-
-.coming-soon {
-  font-size: 2.5rem;
-  color: #EDE877;
-  margin-left: 0.5rem;
-  font-weight: 600;
-}
-
-.description-box {
-  background-color: rgba(217, 217, 217, 0.70);
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  max-width: 500px;
-  /* width: 100%; */
-  text-align: center;
-}
-
-.description-text {
-  font-size: 32;
-  font-family: 'Darker Grotesque', sans-serif;
-  font-weight: 600;
-  line-height: 1.6;
-  color: var(--text-color);
-}
-
-.feature {
-  font-weight: 600;
-}
-
-.advoconnect {
-  color: var(--advoai-teal);
-}
-
-.aially {
-  color: var(--advoai-primary);
-}
-
-.advofinder {
-  color: var(--advoai-coral);
-}
-
-.advoplanner {
-  color: var(--advoai-yellow);
-}
-
-.advointern {
-  color: var(--advoai-blue);
-}
-
-.button-container {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.explore-button {
-  background-color: #F5F2F2;
-  color: var(--text-color);
-  width: 200; 
-  height: 32; 
-  padding: 0.8rem 2rem;
-  font-size: 20;
-  border-radius: 6;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: '1px #706F6F solid';
-}
-
-.explore-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  max-width: 1200px;
-  margin-top: auto;
-  position: relative;
-}
-
-.footer-left {
-  text-align: left;
-  color: #333;
-  font-size: 0.85rem;
-  z-index: 2;
-}
-
-.made-in-india, .secure, .company-name {
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-}
-
-.india-flag {
-  height: 16px;
-  margin-right: 0.5rem;
-}
-
-.secure-icon {
-  margin-right: 0.5rem;
-}
-
-
-.footer-right {
-  text-align: right;
-  color: #333;
-  z-index: 2;
-}
-
-.tagline {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #B59A63;
-  text-shadow: 0px 0px 11px rgba(0, 0, 0, 0.62);
-}
-
-.highlight {
-  color: #37A6A6;
-  font-weight: 700;
-}
-
-/* Make sure everything fits within the viewport */
-@media (max-height: 800px) {
-  .app-container {
-    padding: 1rem;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .main-logo {
-    width: 150px;
+  to {
+    transform: rotate(360deg);
   }
-  
-  .feature-logo {
-    width: 45px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature-detail-container,
+  .home-container {
+    max-width: 42rem;
+    padding: 2rem;
   }
-  
-  .main-title {
+
+  .detail-title,
+  .app-title {
     font-size: 3rem;
   }
-  
-  .coming-soon {
-    font-size: 2rem;
-  }
-  
-  .description-box {
-    padding: 1rem;
-  }
-  
-  .description-text {
-    font-size: 1rem;
-  }
-}
 
-/* Responsive adjustments for width */
-@media (max-width: 768px) {
-  .logo-row {
-    flex-direction: column;
-    gap: 15px;
+  .detail-description,
+  .app-tagline,
+  .feature-description {
+    font-size: 1.25rem;
   }
-  
-  .main-title {
-    font-size: 3rem;
+
+  .detail-list-item,
+  .section-title {
+    font-size: 1.125rem;
   }
-  
-  .coming-soon {
-    font-size: 1.5rem;
-    display: block;
-    margin-left: 0;
+
+  .feature-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
   }
-  
-  .footer {
-    flex-direction: column;
-    align-items: center;
+
+  .feature-item {
+    width: 48%;
+  }
+
+  .related-features {
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 1rem;
   }
-  
-  .footer-left, .footer-right {
-    text-align: center;
-  }
-  
-  .india-emblem {
-    position: static;
-    transform: none;
-    margin: 1rem 0;
+
+  .related-feature-item {
+    font-size: 1.25rem;
+    width: calc(50% - 0.5rem);
   }
 }
 
-@media (max-width: 480px) {
-  .main-title {
-    font-size: 2.5rem;
+@media screen and (min-width: 1024px) {
+  .feature-detail-container,
+  .home-container {
+    max-width: 48rem;
   }
-  
-  .feature-logos {
-    flex-wrap: wrap;
-    justify-content: center;
+
+  .detail-title,
+  .app-title {
+    font-size: 3.25rem;
   }
-  
-  .description-text {
-    font-size: 0.9rem;
+
+  .promotion-title {
+    font-size: 3rem;
   }
-  
-  .explore-button {
-    padding: 0.6rem 1.5rem;
-    font-size: 1rem;
+
+  .promotion-tagline {
+    font-size: 1.5rem;
   }
 }
